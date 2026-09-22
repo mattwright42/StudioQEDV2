@@ -376,49 +376,51 @@ export const CaseStudiesPage = () => {
 
         {/* Case studies list */}
         <section className="py-16 bg-[#CBDB2A]">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="space-y-0">
-              {caseStudies.map((study, index) => (
-                <div
-                  key={index}
-                  className="border-t-2 border-[#5F5644]/20 pt-14 pb-14 last:border-b-2"
-                >
-                  <h3 className="font-sans text-3xl lg:text-4xl font-bold text-[#5F5644] mb-8">
-                    {study.title}
-                  </h3>
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <div className="space-y-10">
+      {caseStudies.map((study, index) => (
+        <div
+          key={index}
+          className="bg-white p-8 lg:p-12 rounded-lg"
+        >
+          <h3 className="font-sans text-3xl lg:text-4xl font-bold text-[#333333] mb-8">
+            {study.title}
+          </h3>
 
-                  <div className="grid md:grid-cols-2 gap-10">
-                    <div>
-                      <h4 className="font-sans text-sm font-bold text-[#5F5644]/60 uppercase tracking-widest mb-3">
-                        Background
-                      </h4>
-                      <p className="text-[#5F5644] leading-relaxed text-lg">
-                        {study.background}
-                      </p>
-                    </div>
+          <div className="grid md:grid-cols-2 gap-10">
+            <div>
+              <h4 className="font-sans text-sm font-bold text-[#555555] uppercase tracking-widest mb-3">
+                Background
+              </h4>
 
-                    <div>
-                      <h4 className="font-sans text-sm font-bold text-[#5F5644]/60 uppercase tracking-widest mb-3">
-                        Results
-                      </h4>
-                      {typeof study.results === "string" ? (
-                        <p className="text-[#5F5644] leading-relaxed text-lg">
-                          {study.results}
-                        </p>
-                      ) : (
-                        <img
-                          src={study.results.image}
-                          alt={study.results.alt ?? "Results"}
-                          className="w-full rounded-lg object-cover"
-                        />
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))}
+              <div className="text-[#333333] leading-relaxed text-lg">
+                {study.background}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-sans text-sm font-bold text-[#555555] uppercase tracking-widest mb-3">
+                Results
+              </h4>
+
+              {typeof study.results === "string" ? (
+                <p className="text-[#333333] leading-relaxed text-lg">
+                  {study.results}
+                </p>
+              ) : (
+                <img
+                  src={study.results.image}
+                  alt={study.results.alt ?? "Results"}
+                  className="w-full rounded-lg object-cover"
+                />
+              )}
             </div>
           </div>
-        </section>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
       </main>
 
       <Footer />
