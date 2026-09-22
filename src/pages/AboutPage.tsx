@@ -31,7 +31,7 @@ export const AboutPage = () => {
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <h1 className="font-sans text-5xl lg:text-6xl font-bold text-[#5F5644]">
-              About Studio QED
+              About Studio QED, Inc.
             </h1>
             <p className="mt-4 text-xl text-[#5F5644]/80 max-w-2xl">
               An award-winning creative and marketing agency dedicated to making your business more successful.
