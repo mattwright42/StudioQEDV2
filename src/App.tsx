@@ -11,8 +11,8 @@ import { AboutPage } from './pages/AboutPage';
 const HomePage = () => (
   <div className="min-h-screen">
     <Navbar />
-    <Hero />
     <Slider />
+    <Hero />
     <Contact />
     <Footer />
   </div>
